@@ -1,41 +1,58 @@
-import React from "react"
-import Image from "next/image"
-import Link from "next/link"
-import SlideUp from "./SlideUp"
-import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import SlideUp from "./SlideUp";
+import "../styles/globals.css";
+import "@fontsource/kanit";
+import { BsArrowUpRightSquare } from "react-icons/bs";
 
 const projects = [
   {
-    name: "Thankful Thoughts",
+    name: "Event Questions",
     description:
-      "ThankfulThoughts is a web app that generates an appreciative sentence of something or someone you are thankful for.",
-    image: "/thankfulthoughts.png",
-    github: "https://github.com/hqasmei/thankful-thoughts",
-    link: "https://thankfulthoughts.io/",
+      "A web app where audiences can ask questions and the host can answer for events. (I wrote some parts of frontends and the others are written by another developer).",
+    image: "/event-questions.png",
+    link: "https://event-question.netlify.app",
   },
   {
-    name: "PlatoIO",
-    description: "PlatoIO is a to do list app that built using the PERN stack.",
-    image: "/platoio.png",
-    github: "https://github.com/hqasmei/platoio",
-    link: "https://platoio.com/register",
+    name: "E Ticket Web App",
+    description:
+      "A ticketing web application powered by API. (I wrote some parts of frontends and the others are written by another developer).",
+    image: "/eticket.png",
+    link: "https://eticket-web-app.netlify.app",
   },
   {
-    name: "Kator Family Photos",
-    description:
-      "Kator Family Photos is a photos and video digitization service in the LA area.",
-    image: "/familyphotos.png",
-    github: "https://github.com/hqasmei/katorfamilyphotos",
-    link: "https://katorfamilyphotos.com/",
+    name: "Note Taker",
+    description: "A web app where you can take notes.",
+    image: "/note-taker.png",
+    link: "https://ye-yint-thway-note-taker.netlify.app",
   },
-]
+  {
+    name: "Quote Generator",
+    description: "A web app that generates quotes by categories.",
+    image: "/quote-generator.png",
+    link: "https://ye-yint-thway-quote-generator.netlify.app",
+  },
+  {
+    name: "Lucky Draw App",
+    description: "A web app where you can set lucky draw items and win.",
+    image: "/lucky-draw.png",
+    link: "https://ye-yint-thway-lucky-draw-app.netlify.app",
+  },
+  {
+    name: "Financial Manager",
+    description: "A web app that can calculate the income and outcome.",
+    image: "/expense-tracker.png",
+    link: "https://ye-yint-thway-financial-manager.netlify.app",
+  },
+];
 
 const ProjectsSection = () => {
   return (
     <section id="projects">
-      <h1 className="my-10 text-center font-bold text-4xl">
+      <h1 className="my-2 text-center font-bold text-4xl">
         Projects
-        <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
+        <hr className="w-6 h-1 mx-auto my-4 bg-white border-0 rounded"></hr>
       </h1>
 
       <div className="flex flex-col space-y-28">
@@ -56,17 +73,19 @@ const ProjectsSection = () => {
                     </Link>
                   </div>
                   <div className="mt-8 md:w-1/2">
-                    <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
-                    <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
+                    <h1 className="text-4xl font-bold mb-6 text-red-700">
+                      {project.name}
+                    </h1>
+                    <p className="text-xl leading-7 mb-4 text-white font-semibold">
                       {project.description}
                     </p>
                     <div className="flex flex-row align-bottom space-x-4">
-                      <Link href={project.github} target="_blank">
+                      {/* <Link href={project.github} target="_blank">
                         <BsGithub
                           size={30}
                           className="hover:-translate-y-1 transition-transform cursor-pointer"
                         />
-                      </Link>
+                      </Link> */}
                       <Link href={project.link} target="_blank">
                         <BsArrowUpRightSquare
                           size={30}
@@ -78,12 +97,11 @@ const ProjectsSection = () => {
                 </div>
               </SlideUp>
             </div>
-          )
+          );
         })}
-        
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ProjectsSection
+export default ProjectsSection;
