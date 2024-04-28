@@ -8,7 +8,14 @@ import { BsArrowUpRightSquare } from "react-icons/bs";
 
 const projects = [
   {
-    name: "Event Questions",
+    name: "Event Registration",
+    description:
+      "A web app where admin can create events and the users can registe and wait for approval. ",
+    image: "/event-registration.png",
+    link: "https://events-registration-web-app.vercel.app/",
+  },
+  {
+    name: "Questions and Answers",
     description:
       "A web app where audiences can ask questions and the host can answer for events. (I wrote some parts of frontends and the others are written by another developer).",
     image: "/event-questions.png",
@@ -44,6 +51,13 @@ const projects = [
     description: "A web app that can calculate the income and outcome.",
     image: "/expense-tracker.png",
     link: "https://ye-yint-thway-financial-manager.netlify.app",
+  },
+  {
+    name: "Age Calculator",
+    description:
+      "A web app that can calculate the user's age by their birthday.",
+    image: "/age-calculator.png",
+    link: "https://ye-yint-thway-codealpha-age-calculato.netlify.app/",
   },
 ];
 
